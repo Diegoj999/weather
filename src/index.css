@@ -1,0 +1,42 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body{
+  max-height: 100vh;
+
+}
+
+#Light {
+    /* Estilos para el modo claro */
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+#Dark {
+    /* Estilos para el modo oscuro */
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  @keyframes toastFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes toastFadeOut {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
