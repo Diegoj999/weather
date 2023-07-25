@@ -2,10 +2,6 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-body{
-  max-height: 100vh;
-
-}
 
 #Light {
     /* Estilos para el modo claro */
