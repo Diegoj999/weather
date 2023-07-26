@@ -12,7 +12,9 @@ function Inputs() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const city = e.currentTarget.city.value;
-    setQuery(city);
+    const cityWithEndSpace = city.charAt(city.length - 1);
+
+    cityWithEndSpace === " " ? setQuery(city.slice(0, -1)) : setQuery(city);
   };
 
   const questionBotton = () => {
@@ -50,18 +52,26 @@ function Inputs() {
           name="city"
           placeholder="Buscar Ciudad..."
           autoComplete="off"
-          className={`font-light p-2 w-full  focus:outline-none ${darkMode ? " bg-gray-200 text-neutral-900" : "border-2 border-blue-300 text-neutral-900" } rounded`}
+          className={`font-light p-2 w-full  focus:outline-none ${
+            darkMode
+              ? " bg-gray-200 text-neutral-900"
+              : "border-2 border-blue-300 text-neutral-900"
+          } rounded`}
         />
         <button type="submit">
           <UilSearch
             size={25}
-            className={`${darkMode ? " text-neutral-200" : "text-neutral-900" } cursor-pointer transition ease-out hover:scale-125`}
+            className={`${
+              darkMode ? " text-neutral-200" : "text-neutral-900"
+            } cursor-pointer transition ease-out hover:scale-125`}
           />
         </button>
         <UilQuestionCircle
           size={35}
           onClick={questionBotton}
-          className={`${darkMode ? " text-neutral-200" : "text-neutral-900" } cursor-pointer transition ease-out hover:scale-125`}
+          className={`${
+            darkMode ? " text-neutral-200" : "text-neutral-900"
+          } cursor-pointer transition ease-out hover:scale-125`}
         />
       </form>
       <WeatherData query={query} />
