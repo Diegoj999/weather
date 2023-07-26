@@ -13,9 +13,9 @@ const Layout = () => {
 
   return (
     <div
-      className={`h-screen ${
+      className={`flex md:block min-h-screen ${
         darkMode ? "bg-gray-800" : "bg-neutral-100"
-      } pt-10 md:pt-20`}
+      } pt-10 pb-10 md:pt-20`}
     >
       <div
         className={`flex flex-col md:mx-auto md:max-w-screen-md mx-2 mt-0 md:my-0 pt-6 pb-10 px-10 md:px-32 ${
